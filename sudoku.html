@@ -3,11 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoku - Play a Game</title>
-    <!-- reference your stylesheet here -->
-    <!-- reference your source code here -->
+    <link rel="stylesheet" href="styles/sudoku.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+    <script type="text/javascript" src="scripts/sudoku.js"></script>
+
+    <title>Document</title>
+    <body>
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="styles/sudoku.css">
+                <img src="images/logo.gif" width="40" height="40">
+              </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu" >
+                <div class="navbar-start">
+                  <a class="navbar-item">
+                    Sudoku Centre
+                  </a>
+                  <a class="navbar-item">
+                    Play Game
+                  </a>
+                  <a class="navbar-item" href="high_scores.html">
+                     High Scores
+                   </a>
+                </div>
+            </div>
+        </nav>
+        <table border="5px" id="Board" align="center"  >
+         <tr id="thickBorder">
+              <td>
+                  <table border="1px" id="TABLE">
+                 <tr>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                 </tr>
+                 <tr>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                 </tr>
+                 <tr>
+                   <td><div id="content"></div></td>
+                   <td><div id="content"></div></td>
+                   <td><div id="content"></div></td>
+                 </tr>
+                 </table>
+               </td>
+               <td>
+                   <table border="1px" id="TABLE">
+                  <tr>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                  </tr>
+                  <tr>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                  </tr>
+                 </table>
+                </td>
+                <td>
+                   <table border="1px" id="TABLE">
+                  <tr>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                  </tr>
+                  <tr>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                     <td><div id="content"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                    <td><div id="content"></div></td>
+                  </tr>
+                 </table>
+                </td>
+       </tr>
+       <tr id="thickBorder">
+           <td>
+               <table border="1px" id="TABLE">
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+              </tr>
+             </table>
+            </td><td>
+               <table border="1px" id="TABLE">
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+              </tr>
+             </table>
+            </td>
+            <td>
+               <table border="1px" id="TABLE">
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+              </tr>
+             </table>
+            </td>
+       </tr>
+       <tr id="thickBorder">
+           <td>
+               <table border="1px" id="TABLE">
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+              </tr>
+             </table>
+            </td><td>
+               <table border="1px" id="TABLE">
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+              </tr>
+             </table>
+            </td><td>
+               <table border="1px" id="TABLE">
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+                 <td><div id="content"></div></td>
+              </tr>
+              <tr>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+                <td><div id="content"></div></td>
+              </tr>
+             </table>
+            </td>
+       </tr>
+       </table>
+       
+
+<table border="2px" padding="2px" align ="center" id="Pallete">
+    <tr>
+        <td><div id="numberbox">1</div></td>
+        <td><div id="numberbox">2</div></td>
+        <td><div id="numberbox">3</div></td>
+        <td><div id="numberbox">4</div></td>
+        <td><div id="numberbox">5</div></td>
+        <td><div id="numberbox">6</div></td>
+        <td><div id="numberbox">7</div></td>
+        <td><div id="numberbox">8</div></td>
+        <td><div id="numberbox">9</div></td>
+        <td><div id="numberbox"><img src="/images/undo.png" width="50px" height="50px"></div></td>
+    </tr>
+</table>
 </head>
-<body>
-    <!-- your content goes here -->
 </body>
 </html>

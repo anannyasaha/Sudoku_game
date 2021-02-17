@@ -1,1 +1,38 @@
 /* add your styling and layout CSS here */
+#content{
+    width: 60px;
+    height: 60px;
+
+}
+#Board{
+    border-width:3px;
+    border-right: 1px ;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    }
+#thickBorder{
+    border-bottom:  2px solid black;
+}
+/* #Board tr:nth-child(3n-2){
+    border-bottom:  2px solid black;
+} */
+
+#TABLE{
+     border-collapse: collapse;
+     border-style:hidden;
+     border-right: 2px solid black;
+}
+
+#numberbox{
+    width: 50px;
+    height: 50px;
+    font-size:40px;
+    border-collapse: collapse;
+    text-align: center;
+}
+#Pallete{
+    margin-top: 3rem;
+}
+#content:hover, #numberbox:hover{
+    background-color: sandybrown;
+}
