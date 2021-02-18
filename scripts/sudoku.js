@@ -21,12 +21,15 @@ window.onload=function(){
 };
     let palette=document.getElementById('Pallete');
     let td=document.createElement("td");
+    let tr=document.createElement('tr');
     for (let i=0;i<10;i++){
         let td=document.createElement("td");
         td.click(function(){
             console.log("click");
         })
+        tr.append(td);
     }
+    palette.append(tr);
     
     
 
