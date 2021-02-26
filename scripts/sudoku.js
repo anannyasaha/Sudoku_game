@@ -3,6 +3,9 @@ var currentrow;
 var currentcolumn;
 var yellowrow;
 var yellowcolumn;
+var sameyellowrow=-1;
+var sameyellowcolumn=-1;
+var erroroccured=0;
 window.onload=function(){
     
         let Board=document.getElementById('Board');
@@ -57,6 +60,8 @@ window.onload=function(){
             currentcolumn=cellid.slice(5);
             column=cellid.slice(5);
         sameblock(row,column,selectedtile);   
+        samerow(row,selectedtile);
+        samecolumn(column,selectedtile);
         var text=document.createTextNode(selectedtile);  
         this.append(text);
         this.style.fontSize="180%";
@@ -77,9 +82,19 @@ window.onload=function(){
         cell.placeholder=-1;
         var cell2=document.getElementById("cell"+yellowrow+yellowcolumn);
         cell2.style.backgroundColor="white";
+        console.log(sameyellowrow,sameyellowcolumn);
+        if(sameyellowcolumn!=-1&&sameyellowrow!=-1){
+        var cell3=document.getElementById("cell"+sameyellowrow+sameyellowcolumn);
+        cell3.style.backgroundColor="white";}
+        yellowrow=-1;
+        yellowcolumn=-1;
+        erroroccured=0;
     }
     function palletteHandeler(){
-        selectedtile=this.innerHTML;
+        if (erroroccured==1){
+        selectedtile=-1;
+        }else{selectedtile=this.innerHTML;}
+        
     }
     function boardHandeler(){
         this.innerHTML=selectedtile;
@@ -101,11 +116,41 @@ window.onload=function(){
                yellowrow=i;
                yellowcolumn=j;
                cell.style.backgroundColor="yellow";
+               erroroccured=1;
            }
 
           }
       }
       }
+      function samerow(row,selectedtile){
+          for (var i=0;i<9;i++){
+              var cell=document.getElementById("cell"+row+i);
+              if(cell.innerText==selectedtile){
+                  console.log(i,row,"samerow");
+                yellowrow=row;
+                yellowcolumn=i;
+                cell.style.backgroundColor="yellow";
+                erroroccured=1;
+            }
+          }
+      }
+      function samecolumn(column,selectedtile){
+        for (var i=0;i<9;i++){
+            var cell=document.getElementById("cell"+i+column);
+            if(cell.innerText==selectedtile){
+                if(yellowrow!=-1 && yellowcolumn!=-1){
+                    sameyellowrow=i;
+                  sameyellowcolumn=column;
+              }
+              else{
+                yellowrow=i;
+                yellowcolumn=column;
+              }
+              cell.style.backgroundColor="yellow";
+              erroroccured=1;
+          }
+        }
+    }
     
     
     
